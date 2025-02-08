@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* General reset */
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      label,
+      input,
+      textarea,
+      select,
+      button {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        background-image: url(https://wallpapercave.com/wp/wp10928748.jpg); 
+      }
+
+      /* Header styles */
+      .header {
+        text-align: center;
+        /* background-color: #007bff; */
+        background-image: url(https://wallpapercave.com/wp/wp10928748.jpg);
+        color: #fff;
+        padding: 20px 0;
+        height: 50px;
+      }
+
+      .header h1 {
+        font-size: 2em;
+      }
+
+      /* Main container styles */
+      .container {
+        text-align: center;
+        padding: 20px;
+        height: 95px;
+        background-image: url(https://wallpapercave.com/wp/wp10928748.jpg);
+      }
+
+      .form-container {
+        background-color: #fff;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 1.25em;
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      p {
+        font-size: 1em;
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      /* Form styles */
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      label {
+        text-align: left;
+        font-size: 0.9em;
+        margin-bottom: 5px;
+        color: #555;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+
+      button {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      /* Error message */
+      .error-message {
+        font-size: 0.8em;
+        color: red;
+        margin-top: -8px;
+        margin-bottom: 5px;
+      }
+
+      /* Footer styles */
+      .footer {
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+      a{
+        text-decoration: none;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <header class="header">
+      <h1>Ignite Learning</h1>
+    </header>
+    <main>
+      <div class="container">
+        <!-- <p>Design a Registration Form and validate it</p> -->
+        <div class="form-container">
+          <!-- <h3>Registration Form</h3> -->
+          <form id="registrationForm">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            <small id="nameError" class="error-message"></small>
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+            <label for="school_name">School name</label>
+            <input
+              type="text"
+              id="text"
+              name="School_name"
+              placeholder="Enter your school name"
+              required
+            />
+            
+        
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+
+            <!-- <label for="bio">Bio</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="4"
+              placeholder="Tell us about yourself"
+            ></textarea> -->
+
+            <button type="submit"><a href="hc.html">Submit</a></button></a>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!-- <footer class="footer"> -->
+    <!-- <p>&copy; 2024 My Website</p> -->
+    <!-- </footer> -->
+    <script src="script.js"></script>
+  </body>
+</html>

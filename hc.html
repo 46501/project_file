@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite Learning</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .card {
+            margin: 10px;
+        }
+        .navbar {
+            padding: 0.5rem 1rem;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .nav-link {
+            font-size: 1rem;
+        }
+        .search-bar {
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        .search-button {
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background-color: #f8f9fa;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">EduQuest</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Quests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Leaderboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Competitive Exams</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="search-bar form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="search-button btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button class="btn btn-link my-2 my-sm-0" data-toggle="modal" data-target="#loginModal"><a href="login_page.html">Login</a></button>
+            <div class="navbar-text">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Math Quest</h5>
+                        <p class="card-text">Complete math challenges to earn rewards and badges.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#mathModal">Start Quest</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Science Quest</h5>
+                        <p class="card-text">Explore science concepts through interactive games and quizzes.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#scienceModal">Start Quest</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">English Quest</h5>
+                        <p class="card-text">Improve your English skills through reading, writing, and vocabulary challenges.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#englishModal">Start Quest</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">History Quest</h5>
+                        <p class="card-text">Discover historical events and figures through engaging quizzes and games.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#historyModal">Start Quest</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Geography Quest</h5>
+                        <p class="card-text">Explore the world's countries, cities, and landmarks through interactive maps and quizzes.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#geographyModal">Start Quest</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Science Quest</h5>
+                        <p class="card-text">Learn programming concepts and develop problem-solving skills through coding challenges.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#csModal">Start Quest</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center">Competitive Exams</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">JEE</h5>
+                        <p class="card-text">Joint Entrance Examination (JEE) is a national-level entrance exam for admission to undergraduate programs in top engineering colleges in India.</p>
+                        <a href="#" class="btn btn-primary">Video Lectures</a>
+                        <a href="#" class="btn btn-primary">Previous Year Questions</a>
+                        <ul>
+                            <li><a href="https://www.youtube.com/playlist?list=PLbBVy5HhN4QL6pMlHmQGd7fA8m7kqJ">Physics Lectures</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLbBVy5HhN4QL-Km4b3uXf8ZP6TqSj">Chemistry Lectures</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLbBVy5HhN4QL-QXkVZzr5z0Z">Mathematics Lectures</a></li>
+                            <li><a href="https://www.jeeadv.ac.in/previous-year-papers">Previous Year Papers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">NEET</h5>
+                        <p class="card-text">National Eligibility cum Entrance Test (NEET) is a national-level entrance exam for admission to undergraduate programs in medical and dental colleges in India.</p>
+                        <a href="#" class="btn btn-primary">Video Lectures</a>
+                        <a href="#" class="btn btn-primary">Previous Year Questions</a>
+                        <ul>
+                            <li><a href="https://www.youtube.com/playlist?list=PLbBVy5HhN4QL6pMlHmQGd7fA8m7kqJ">Biology Lectures</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLbBVy5HhN4QL-Km4b3uXf8ZP6TqSj">Chemistry Lectures</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLbBVy5HhN4QL-QXkVZzr5z0Z">Physics Lectures</a></li>
+                            <li><a href="https://nta.ac.in/Content/Previous-Year-Papers">Previous Year Papers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Math Modal -->
+    <div class="modal fade" id="mathModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Math Quest</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="mathModalBody">
+                    <p id="mathQuestion"></p>
+                    <div id="mathOptions"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="checkMathAnswer()">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="nextMathQuestion()">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let mathQuestions = [
+            {
+                question: "What is the value of x in the equation 2x + 5 = 11?",
+                options: ["2", "3", "4", "5"],
+                answer: "3"
+            },
+            {
+                question: "If a bakery sells 250 loaves of bread per day, how many loaves does it sell in a week?",
+                options: ["1500", "1750", "2000", "2500"],
+                answer: "1750"
+            },
+            {
+                question: "What is the formula for the area of a circle?",
+                options: ["πr^2", "2πr", "πr", "r^2"],
+                answer: "πr^2"
+            },
+            {
+                question: "If a car travels 250 miles in 5 hours, how many miles does it travel per hour?",
+                options: ["25", "50", "75", "100"],
+                answer: "50"
+            },
+            {
+                question: "What is the value of y in the equation y - 3 = 7?",
+                options: ["4", "5", "10", "12"],
+                answer: "10"
+            },
+            {
+                question: "If a water tank can hold 1000 liters of water, how many liters can it hold if it is already filled with 300 liters of water?",
+                options: ["700", "800", "900", "1000"],
+                answer: "700"
+            },
+            {
+                question: "What is the formula for the perimeter of a rectangle?",
+                options: ["2l + 2w", "l + 2w", "2l + w", "l + w"],
+                answer: "2l + 2w"
+            },
+            {
+                question: "If a bicycle travels 10 miles in 2 hours, how many miles does it travel per hour?",
+                options: ["4", "5", "6", "8"],
+                answer: "5"
+            },
+            {
+                question: "What is the value of z in the equation z + 2 = 9?",
+                options: ["5", "6", "7", "11"],
+                answer: "7"
+            },
+            {
+                question: "If a box of crayons weighs 0.5 kg, how many kilograms does a box of 12 crayons weigh?",
+                options: ["5", "6", "12", "24"],
+                answer: "6"
+            }
+        ];
+
+        let currentMathQuestion = 0;
+
+        function displayMathQuestion() {
+            let question = mathQuestions[currentMathQuestion];
+            document.getElementById("mathQuestion").innerHTML = question.question;
+            let options = "";
+            for (let i = 0; i < question.options.length; i++) {
+                options += "<button class='btn btn-primary' onclick='checkMathAnswer(" + question.options[i] + ")'>" + question.options[i] + "</button> ";
+            }
+            document.getElementById("mathOptions").innerHTML = options;
+        }
+
+        function checkMathAnswer(answer) {
+            let question = mathQuestions[currentMathQuestion];
+            if (answer == question.answer) {
+                console.log("Correct!");
+            } else {
+                console.log("Incorrect. The correct answer is " + question.answer);
+            }
+        }
+
+        function nextMathQuestion() {
+            currentMathQuestion++;
+            if (currentMathQuestion >= mathQuestions.length) {
+                currentMathQuestion = 0;
+            }
+            displayMathQuestion();
+        }
+
+        displayMathQuestion();
+    </script>
+
+    <!-- Science Modal -->
+    <div class="modal fade" id="scienceModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Science Quest</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="scienceModalBody">
+                    <p id="scienceQuestion"></p>
+                    <div id="scienceOptions"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="checkScienceAnswer()">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="nextScienceQuestion()">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let scienceQuestions = [
+            {
+                question: "What is the largest planet in our solar system?",
+                options: ["Earth", "Saturn", "Jupiter", "Uranus"],
+                answer: "Jupiter"
+            },
+            {
+                question: "What is the process by which plants make their own food?",
+                options: ["Respiration", "Photosynthesis", "Decomposition", "Fermentation"],
+                answer: "Photosynthesis"
+            },
+            {
+                question: "What is the largest living structure on Earth?",
+                options: ["The Great Barrier Reef", "The Amazon Rainforest", "The Grand Canyon", "The Great Wall of China"],
+                answer: "The Great Barrier Reef"
+            },
+            {
+                question: "What is the scientific term for the study of the structure, behavior, and evolution of the universe?",
+                options: ["Cosmology", "Astronomy", "Geology", "Biology"],
+                answer: "Cosmology"
+            },
+            {
+                question: "What is the process by which water moves through a plant, from the roots to the leaves, and is then released into the air as water vapor?",
+                options: ["Transpiration", "Respiration", "Photosynthesis", "Evaporation"],
+                answer: "Transpiration"
+            },
+            {
+                question: "What is the largest mammal on Earth?",
+                options: ["Blue whale", "Fin whale", "Humpback whale", "Sperm whale"],
+                answer: "Blue whale"
+            },
+            {
+                question: "What is the scientific term for the study of the weather and atmosphere?",
+                options: ["Meteorology", "Climatology", "Geology", "Oceanography"],
+                answer: "Meteorology"
+            },
+            {
+                question: "What is the process by which the Earth's plates move and change, resulting in the formation of mountains and volcanoes?",
+                options: ["Plate tectonics", "Weathering", "Erosion", "Deposition"],
+                answer: "Plate tectonics"
+            },
+            {
+                question: "What is the scientific term for the study of the structure, behavior, and evolution of living organisms?",
+                options: ["Biology", "Zoology", "Botany", "Ecology"],
+                answer: "Biology"
+            },
+            {
+                question: "What is the largest desert in the world?",
+                options: ["Sahara", "Gobi", "Mojave", "Atacama"],
+                answer: "Sahara"
+            },
+            {
+                question: "What is the process by which humans and animals breathe in oxygen and release carbon dioxide?",
+                options: ["Respiration", "Photosynthesis", "Decomposition", "Fermentation"],
+                answer: "Respiration"
+            },
+            {
+                question: "What is the scientific term for the study of the Earth's physical structure, composition, and processes?",
+                options: ["Geology", "Meteorology", "Oceanography", "Astronomy"],
+                answer: "Geology"
+            }
+        ];
+
+        let currentScienceQuestion = 0;
+
+        function displayScienceQuestion() {
+            let question = scienceQuestions[currentScienceQuestion];
+            document.getElementById("scienceQuestion").innerHTML = question.question;
+            let
